@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+chapter5_tutorials/CMakeFiles/laser2.dir/rule:
+	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/laser2.dir/rule
+.PHONY : chapter5_tutorials/CMakeFiles/laser2.dir/rule
+
+# Convenience name for target.
+laser2: chapter5_tutorials/CMakeFiles/laser2.dir/rule
+
+.PHONY : laser2
+
+# fast build rule for target.
+laser2/fast:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/build
+.PHONY : laser2/fast
+
+# Convenience name for target.
 chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/rule:
 	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/rule
 .PHONY : chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/rule
@@ -914,6 +929,33 @@ src/laser.cpp.s:
 	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/laser.dir/build.make chapter5_tutorials/CMakeFiles/laser.dir/src/laser.cpp.s
 .PHONY : src/laser.cpp.s
 
+src/laser2.o: src/laser2.cpp.o
+
+.PHONY : src/laser2.o
+
+# target to build an object file
+src/laser2.cpp.o:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/src/laser2.cpp.o
+.PHONY : src/laser2.cpp.o
+
+src/laser2.i: src/laser2.cpp.i
+
+.PHONY : src/laser2.i
+
+# target to preprocess a source file
+src/laser2.cpp.i:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/src/laser2.cpp.i
+.PHONY : src/laser2.cpp.i
+
+src/laser2.s: src/laser2.cpp.s
+
+.PHONY : src/laser2.s
+
+# target to generate assembly for a file
+src/laser2.cpp.s:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/src/laser2.cpp.s
+.PHONY : src/laser2.cpp.s
+
 src/tf_broadcaster.o: src/tf_broadcaster.cpp.o
 
 .PHONY : src/tf_broadcaster.o
@@ -977,6 +1019,7 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... laser2"
 	@echo "... tf_broadcaster"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"
@@ -1032,6 +1075,9 @@ help:
 	@echo "... src/laser.o"
 	@echo "... src/laser.i"
 	@echo "... src/laser.s"
+	@echo "... src/laser2.o"
+	@echo "... src/laser2.i"
+	@echo "... src/laser2.s"
 	@echo "... src/tf_broadcaster.o"
 	@echo "... src/tf_broadcaster.i"
 	@echo "... src/tf_broadcaster.s"

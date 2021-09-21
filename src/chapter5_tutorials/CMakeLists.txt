@@ -208,7 +208,9 @@ include_directories(
 add_executable(tf_broadcaster src/tf_broadcaster.cpp)
 add_executable(tf_listener src/tf_listener.cpp)
 add_executable(laser src/laser.cpp)
+add_executable(laser2 src/laser2.cpp)
 
 target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
 target_link_libraries(tf_listener ${catkin_LIBRARIES})
 target_link_libraries(laser ${catkin_LIBRARIES})
+target_link_libraries(laser2 ${catkin_LIBRARIES})

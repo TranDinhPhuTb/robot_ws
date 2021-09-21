@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named laser2
+
+# Build rule for target.
+laser2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 laser2
+.PHONY : laser2
+
+# fast build rule for target.
+laser2/fast:
+	$(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/build
+.PHONY : laser2/fast
+
+#=============================================================================
 # Target rules for targets named tf_broadcaster
 
 # Build rule for target.
@@ -1580,6 +1593,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... laser2"
 	@echo "... tf_broadcaster"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf2_msgs_generate_messages_lisp"

@@ -38,6 +38,7 @@
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/install/strip.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/install.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/list_install_components.dir
+/home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/laser2.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/tf_broadcaster.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/tf2_msgs_generate_messages_lisp.dir
