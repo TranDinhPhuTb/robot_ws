@@ -1,2 +1,2 @@
-chapter2_tutorials:chapter4_tutorials/robot1_description:chapter4_tutorials/robot1_gazebo:chapter5_tutorials
+chapter2_tutorials:chapter4_tutorials/robot1_description:chapter4_tutorials/robot1_gazebo:chapter5_tutorials:learning_tf2
 -DCATKIN_DEVEL_PREFIX=/home/phu/robot_ws/devel -DCMAKE_INSTALL_PREFIX=/home/phu/robot_ws/install -G Unix Makefiles
