@@ -813,6 +813,21 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+chapter5_tutorials/CMakeFiles/odometry.dir/rule:
+	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/odometry.dir/rule
+.PHONY : chapter5_tutorials/CMakeFiles/odometry.dir/rule
+
+# Convenience name for target.
+odometry: chapter5_tutorials/CMakeFiles/odometry.dir/rule
+
+.PHONY : odometry
+
+# fast build rule for target.
+odometry/fast:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/build
+.PHONY : odometry/fast
+
+# Convenience name for target.
 chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
@@ -956,6 +971,33 @@ src/laser2.cpp.s:
 	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/src/laser2.cpp.s
 .PHONY : src/laser2.cpp.s
 
+src/odometry.o: src/odometry.cpp.o
+
+.PHONY : src/odometry.o
+
+# target to build an object file
+src/odometry.cpp.o:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/src/odometry.cpp.o
+.PHONY : src/odometry.cpp.o
+
+src/odometry.i: src/odometry.cpp.i
+
+.PHONY : src/odometry.i
+
+# target to preprocess a source file
+src/odometry.cpp.i:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/src/odometry.cpp.i
+.PHONY : src/odometry.cpp.i
+
+src/odometry.s: src/odometry.cpp.s
+
+.PHONY : src/odometry.s
+
+# target to generate assembly for a file
+src/odometry.cpp.s:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/src/odometry.cpp.s
+.PHONY : src/odometry.cpp.s
+
 src/tf_broadcaster.o: src/tf_broadcaster.cpp.o
 
 .PHONY : src/tf_broadcaster.o
@@ -1066,6 +1108,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... odometry"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
@@ -1078,6 +1121,9 @@ help:
 	@echo "... src/laser2.o"
 	@echo "... src/laser2.i"
 	@echo "... src/laser2.s"
+	@echo "... src/odometry.o"
+	@echo "... src/odometry.i"
+	@echo "... src/odometry.s"
 	@echo "... src/tf_broadcaster.o"
 	@echo "... src/tf_broadcaster.i"
 	@echo "... src/tf_broadcaster.s"

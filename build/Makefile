@@ -844,6 +844,19 @@ sensor_msgs_generate_messages_lisp/fast:
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 #=============================================================================
+# Target rules for targets named odometry
+
+# Build rule for target.
+odometry: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 odometry
+.PHONY : odometry
+
+# fast build rule for target.
+odometry/fast:
+	$(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/build
+.PHONY : odometry/fast
+
+#=============================================================================
 # Target rules for targets named sensor_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -1636,6 +1649,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_lisp"
+	@echo "... odometry"
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"

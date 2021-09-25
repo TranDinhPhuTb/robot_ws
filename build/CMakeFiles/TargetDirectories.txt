@@ -85,6 +85,7 @@
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_py.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_py.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
+/home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/odometry.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/phu/robot_ws/build/chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
