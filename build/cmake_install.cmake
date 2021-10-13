@@ -135,6 +135,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/phu/robot_ws/build/chapter4_tutorials/robot1_description/cmake_install.cmake")
   include("/home/phu/robot_ws/build/chapter4_tutorials/robot1_gazebo/cmake_install.cmake")
   include("/home/phu/robot_ws/build/chapter2_tutorials/cmake_install.cmake")
+  include("/home/phu/robot_ws/build/chapter6_tutorials/cmake_install.cmake")
   include("/home/phu/robot_ws/build/learning_tf2/cmake_install.cmake")
 
 endif()

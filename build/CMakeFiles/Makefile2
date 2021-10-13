@@ -58,6 +58,7 @@ all: chapter5_tutorials/all
 all: chapter4_tutorials/robot1_description/all
 all: chapter4_tutorials/robot1_gazebo/all
 all: chapter2_tutorials/all
+all: chapter6_tutorials/all
 all: learning_tf2/all
 
 .PHONY : all
@@ -68,6 +69,7 @@ preinstall: chapter5_tutorials/preinstall
 preinstall: chapter4_tutorials/robot1_description/preinstall
 preinstall: chapter4_tutorials/robot1_gazebo/preinstall
 preinstall: chapter2_tutorials/preinstall
+preinstall: chapter6_tutorials/preinstall
 preinstall: learning_tf2/preinstall
 
 .PHONY : preinstall
@@ -83,6 +85,7 @@ clean: chapter5_tutorials/clean
 clean: chapter4_tutorials/robot1_description/clean
 clean: chapter4_tutorials/robot1_gazebo/clean
 clean: chapter2_tutorials/clean
+clean: chapter6_tutorials/clean
 clean: learning_tf2/clean
 
 .PHONY : clean
@@ -190,6 +193,7 @@ chapter4_tutorials/robot1_gazebo/clean:
 # Recursive "all" directory target.
 chapter5_tutorials/all: chapter5_tutorials/CMakeFiles/laser2.dir/all
 chapter5_tutorials/all: chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/all
+chapter5_tutorials/all: chapter5_tutorials/CMakeFiles/base_controller.dir/all
 chapter5_tutorials/all: chapter5_tutorials/CMakeFiles/tf_listener.dir/all
 chapter5_tutorials/all: chapter5_tutorials/CMakeFiles/laser.dir/all
 chapter5_tutorials/all: chapter5_tutorials/CMakeFiles/odometry.dir/all
@@ -226,6 +230,7 @@ chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/tf2_msgs_generate_messag
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/tf_generate_messages_eus.dir/clean
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/base_controller.dir/clean
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/tf_generate_messages_cpp.dir/clean
@@ -254,6 +259,24 @@ chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/std_msgs_generate_messag
 chapter5_tutorials/clean: chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 
 .PHONY : chapter5_tutorials/clean
+
+#=============================================================================
+# Directory level rules for directory chapter6_tutorials
+
+# Recursive "all" directory target.
+chapter6_tutorials/all: chapter6_tutorials/CMakeFiles/sendGoals.dir/all
+
+.PHONY : chapter6_tutorials/all
+
+# Recursive "preinstall" directory target.
+chapter6_tutorials/preinstall:
+
+.PHONY : chapter6_tutorials/preinstall
+
+# Recursive "clean" directory target.
+chapter6_tutorials/clean: chapter6_tutorials/CMakeFiles/sendGoals.dir/clean
+
+.PHONY : chapter6_tutorials/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -489,7 +512,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googlemock/CMakeFiles/gmoc
 gtest/googlemock/CMakeFiles/gmock_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=33,34 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=35,36 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -516,7 +539,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=31,32 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=33,34 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -543,7 +566,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googletest/CMakeFiles/gtest_main.dir/all: gtest/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=37,38 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=39,40 "Built target gtest_main"
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -570,7 +593,7 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 gtest/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=35,36 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=37,38 "Built target gtest"
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -597,7 +620,7 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 chapter5_tutorials/CMakeFiles/laser2.dir/all:
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/depend
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/laser2.dir/build.make chapter5_tutorials/CMakeFiles/laser2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=41,42 "Built target laser2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=43,44 "Built target laser2"
 .PHONY : chapter5_tutorials/CMakeFiles/laser2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -624,7 +647,7 @@ chapter5_tutorials/CMakeFiles/laser2.dir/clean:
 chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/all:
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/build.make chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/depend
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/build.make chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=49,50 "Built target tf_broadcaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=53,54 "Built target tf_broadcaster"
 .PHONY : chapter5_tutorials/CMakeFiles/tf_broadcaster.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1239,6 +1262,33 @@ chapter5_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
 .PHONY : chapter5_tutorials/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
+# Target rules for target chapter5_tutorials/CMakeFiles/base_controller.dir
+
+# All Build rule for target.
+chapter5_tutorials/CMakeFiles/base_controller.dir/all:
+	$(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/depend
+	$(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=1,2 "Built target base_controller"
+.PHONY : chapter5_tutorials/CMakeFiles/base_controller.dir/all
+
+# Build rule for subdir invocation for target.
+chapter5_tutorials/CMakeFiles/base_controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/base_controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+.PHONY : chapter5_tutorials/CMakeFiles/base_controller.dir/rule
+
+# Convenience name for target.
+base_controller: chapter5_tutorials/CMakeFiles/base_controller.dir/rule
+
+.PHONY : base_controller
+
+# clean rule for target.
+chapter5_tutorials/CMakeFiles/base_controller.dir/clean:
+	$(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/clean
+.PHONY : chapter5_tutorials/CMakeFiles/base_controller.dir/clean
+
+#=============================================================================
 # Target rules for target chapter5_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -1353,7 +1403,7 @@ chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
 chapter5_tutorials/CMakeFiles/tf_listener.dir/all:
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/tf_listener.dir/build.make chapter5_tutorials/CMakeFiles/tf_listener.dir/depend
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/tf_listener.dir/build.make chapter5_tutorials/CMakeFiles/tf_listener.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=51,52 "Built target tf_listener"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=55,56 "Built target tf_listener"
 .PHONY : chapter5_tutorials/CMakeFiles/tf_listener.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1434,7 +1484,7 @@ chapter5_tutorials/CMakeFiles/roscpp_generate_messages_py.dir/clean:
 chapter5_tutorials/CMakeFiles/laser.dir/all:
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/laser.dir/build.make chapter5_tutorials/CMakeFiles/laser.dir/depend
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/laser.dir/build.make chapter5_tutorials/CMakeFiles/laser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=39,40 "Built target laser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=41,42 "Built target laser"
 .PHONY : chapter5_tutorials/CMakeFiles/laser.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1758,7 +1808,7 @@ chapter5_tutorials/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
 chapter5_tutorials/CMakeFiles/odometry.dir/all:
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/depend
 	$(MAKE) -f chapter5_tutorials/CMakeFiles/odometry.dir/build.make chapter5_tutorials/CMakeFiles/odometry.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=43,44 "Built target odometry"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=45,46 "Built target odometry"
 .PHONY : chapter5_tutorials/CMakeFiles/odometry.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2001,7 +2051,7 @@ chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_me
 chapter4_tutorials/robot1_description/CMakeFiles/state_publisher.dir/all:
 	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/state_publisher.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/state_publisher.dir/depend
 	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/state_publisher.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/state_publisher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=45,46 "Built target state_publisher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=49,50 "Built target state_publisher"
 .PHONY : chapter4_tutorials/robot1_description/CMakeFiles/state_publisher.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2352,7 +2402,7 @@ chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/
 chapter2_tutorials/CMakeFiles/example3_a.dir/all: chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example3_a.dir/build.make chapter2_tutorials/CMakeFiles/example3_a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=23,24 "Built target example3_a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=25,26 "Built target example3_a"
 .PHONY : chapter2_tutorials/CMakeFiles/example3_a.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2379,7 +2429,7 @@ chapter2_tutorials/CMakeFiles/example3_a.dir/clean:
 chapter2_tutorials/CMakeFiles/example1_a.dir/all:
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example1_a.dir/build.make chapter2_tutorials/CMakeFiles/example1_a.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example1_a.dir/build.make chapter2_tutorials/CMakeFiles/example1_a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=15,16 "Built target example1_a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=17,18 "Built target example1_a"
 .PHONY : chapter2_tutorials/CMakeFiles/example1_a.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2435,7 +2485,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/all:
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/all: chapter2_tutorials/CMakeFiles/_chapter2_tutorials_generate_messages_check_deps_chapter2_srv1.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=7,8 "Built target chapter2_tutorials_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=9,10 "Built target chapter2_tutorials_generate_messages_lisp"
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2518,7 +2568,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/all: c
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/all: chapter2_tutorials/CMakeFiles/_chapter2_tutorials_generate_messages_check_deps_chapter2_srv1.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=11,12,13,14 "Built target chapter2_tutorials_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=13,14,15,16 "Built target chapter2_tutorials_generate_messages_py"
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2545,7 +2595,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_py.dir/clean:
 chapter2_tutorials/CMakeFiles/example1_b.dir/all:
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example1_b.dir/build.make chapter2_tutorials/CMakeFiles/example1_b.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example1_b.dir/build.make chapter2_tutorials/CMakeFiles/example1_b.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=17,18 "Built target example1_b"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=19,20 "Built target example1_b"
 .PHONY : chapter2_tutorials/CMakeFiles/example1_b.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2574,7 +2624,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all: 
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all: chapter2_tutorials/CMakeFiles/_chapter2_tutorials_generate_messages_check_deps_chapter2_srv1.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=2,3 "Built target chapter2_tutorials_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=4,5 "Built target chapter2_tutorials_generate_messages_cpp"
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2601,7 +2651,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/clean
 chapter2_tutorials/CMakeFiles/example3_b.dir/all: chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example3_b.dir/build.make chapter2_tutorials/CMakeFiles/example3_b.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=25,26 "Built target example3_b"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=27,28 "Built target example3_b"
 .PHONY : chapter2_tutorials/CMakeFiles/example3_b.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2628,7 +2678,7 @@ chapter2_tutorials/CMakeFiles/example3_b.dir/clean:
 chapter2_tutorials/CMakeFiles/example2_b.dir/all: chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example2_b.dir/build.make chapter2_tutorials/CMakeFiles/example2_b.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=21,22 "Built target example2_b"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=23,24 "Built target example2_b"
 .PHONY : chapter2_tutorials/CMakeFiles/example2_b.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2709,7 +2759,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencpp.dir/clean:
 chapter2_tutorials/CMakeFiles/example4.dir/all: chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example4.dir/build.make chapter2_tutorials/CMakeFiles/example4.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example4.dir/build.make chapter2_tutorials/CMakeFiles/example4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=27,28 "Built target example4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=29,30 "Built target example4"
 .PHONY : chapter2_tutorials/CMakeFiles/example4.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2736,7 +2786,7 @@ chapter2_tutorials/CMakeFiles/example4.dir/clean:
 chapter2_tutorials/CMakeFiles/example2_a.dir/all: chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_cpp.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/example2_a.dir/build.make chapter2_tutorials/CMakeFiles/example2_a.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=19,20 "Built target example2_a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=21,22 "Built target example2_a"
 .PHONY : chapter2_tutorials/CMakeFiles/example2_a.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2765,7 +2815,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/all: 
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/all: chapter2_tutorials/CMakeFiles/_chapter2_tutorials_generate_messages_check_deps_chapter2_srv1.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=4,5,6 "Built target chapter2_tutorials_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=6,7,8 "Built target chapter2_tutorials_generate_messages_eus"
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2792,7 +2842,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_eus.dir/clean
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/all:
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=1 "Built target chapter2_tutorials_gencfg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=3 "Built target chapter2_tutorials_gencfg"
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_gencfg.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2906,7 +2956,7 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/al
 chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/all: chapter2_tutorials/CMakeFiles/_chapter2_tutorials_generate_messages_check_deps_chapter2_srv1.dir/all
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/depend
 	$(MAKE) -f chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/build.make chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=9,10 "Built target chapter2_tutorials_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=11,12 "Built target chapter2_tutorials_generate_messages_nodejs"
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2927,13 +2977,40 @@ chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/cl
 .PHONY : chapter2_tutorials/CMakeFiles/chapter2_tutorials_generate_messages_nodejs.dir/clean
 
 #=============================================================================
+# Target rules for target chapter6_tutorials/CMakeFiles/sendGoals.dir
+
+# All Build rule for target.
+chapter6_tutorials/CMakeFiles/sendGoals.dir/all:
+	$(MAKE) -f chapter6_tutorials/CMakeFiles/sendGoals.dir/build.make chapter6_tutorials/CMakeFiles/sendGoals.dir/depend
+	$(MAKE) -f chapter6_tutorials/CMakeFiles/sendGoals.dir/build.make chapter6_tutorials/CMakeFiles/sendGoals.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=47,48 "Built target sendGoals"
+.PHONY : chapter6_tutorials/CMakeFiles/sendGoals.dir/all
+
+# Build rule for subdir invocation for target.
+chapter6_tutorials/CMakeFiles/sendGoals.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 chapter6_tutorials/CMakeFiles/sendGoals.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+.PHONY : chapter6_tutorials/CMakeFiles/sendGoals.dir/rule
+
+# Convenience name for target.
+sendGoals: chapter6_tutorials/CMakeFiles/sendGoals.dir/rule
+
+.PHONY : sendGoals
+
+# clean rule for target.
+chapter6_tutorials/CMakeFiles/sendGoals.dir/clean:
+	$(MAKE) -f chapter6_tutorials/CMakeFiles/sendGoals.dir/build.make chapter6_tutorials/CMakeFiles/sendGoals.dir/clean
+.PHONY : chapter6_tutorials/CMakeFiles/sendGoals.dir/clean
+
+#=============================================================================
 # Target rules for target learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir
 
 # All Build rule for target.
 learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir/all:
 	$(MAKE) -f learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir/build.make learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir/depend
 	$(MAKE) -f learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir/build.make learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=29,30 "Built target frame_tf2_broadcaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=31,32 "Built target frame_tf2_broadcaster"
 .PHONY : learning_tf2/CMakeFiles/frame_tf2_broadcaster.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3095,7 +3172,7 @@ learning_tf2/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
 learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/all:
 	$(MAKE) -f learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/build.make learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/depend
 	$(MAKE) -f learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/build.make learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=47,48 "Built target static_turtle_tf2_broadcaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=51,52 "Built target static_turtle_tf2_broadcaster"
 .PHONY : learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3122,7 +3199,7 @@ learning_tf2/CMakeFiles/static_turtle_tf2_broadcaster.dir/clean:
 learning_tf2/CMakeFiles/turtle_tf2_listener.dir/all:
 	$(MAKE) -f learning_tf2/CMakeFiles/turtle_tf2_listener.dir/build.make learning_tf2/CMakeFiles/turtle_tf2_listener.dir/depend
 	$(MAKE) -f learning_tf2/CMakeFiles/turtle_tf2_listener.dir/build.make learning_tf2/CMakeFiles/turtle_tf2_listener.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=55,56 "Built target turtle_tf2_listener"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=59,60 "Built target turtle_tf2_listener"
 .PHONY : learning_tf2/CMakeFiles/turtle_tf2_listener.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3284,7 +3361,7 @@ learning_tf2/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
 learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/all:
 	$(MAKE) -f learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/build.make learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/depend
 	$(MAKE) -f learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/build.make learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=53,54 "Built target turtle_tf2_broadcaster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num=57,58 "Built target turtle_tf2_broadcaster"
 .PHONY : learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/all
 
 # Build rule for subdir invocation for target.

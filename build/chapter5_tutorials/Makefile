@@ -528,6 +528,21 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
+chapter5_tutorials/CMakeFiles/base_controller.dir/rule:
+	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/base_controller.dir/rule
+.PHONY : chapter5_tutorials/CMakeFiles/base_controller.dir/rule
+
+# Convenience name for target.
+base_controller: chapter5_tutorials/CMakeFiles/base_controller.dir/rule
+
+.PHONY : base_controller
+
+# fast build rule for target.
+base_controller/fast:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/build
+.PHONY : base_controller/fast
+
+# Convenience name for target.
 chapter5_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
 	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter5_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
 .PHONY : chapter5_tutorials/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
@@ -917,6 +932,33 @@ geometry_msgs_generate_messages_eus/fast:
 	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
 .PHONY : geometry_msgs_generate_messages_eus/fast
 
+src/base_controller.o: src/base_controller.cpp.o
+
+.PHONY : src/base_controller.o
+
+# target to build an object file
+src/base_controller.cpp.o:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/src/base_controller.cpp.o
+.PHONY : src/base_controller.cpp.o
+
+src/base_controller.i: src/base_controller.cpp.i
+
+.PHONY : src/base_controller.i
+
+# target to preprocess a source file
+src/base_controller.cpp.i:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/src/base_controller.cpp.i
+.PHONY : src/base_controller.cpp.i
+
+src/base_controller.s: src/base_controller.cpp.s
+
+.PHONY : src/base_controller.s
+
+# target to generate assembly for a file
+src/base_controller.cpp.s:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/src/base_controller.cpp.s
+.PHONY : src/base_controller.cpp.s
+
 src/laser.o: src/laser.cpp.o
 
 .PHONY : src/laser.o
@@ -1088,6 +1130,7 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... test"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... base_controller"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... tf_generate_messages_cpp"
@@ -1115,6 +1158,9 @@ help:
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
+	@echo "... src/base_controller.o"
+	@echo "... src/base_controller.i"
+	@echo "... src/base_controller.s"
 	@echo "... src/laser.o"
 	@echo "... src/laser.i"
 	@echo "... src/laser.s"

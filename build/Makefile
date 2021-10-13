@@ -597,6 +597,19 @@ rosgraph_msgs_generate_messages_cpp/fast:
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named base_controller
+
+# Build rule for target.
+base_controller: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 base_controller
+.PHONY : base_controller
+
+# fast build rule for target.
+base_controller/fast:
+	$(MAKE) -f chapter5_tutorials/CMakeFiles/base_controller.dir/build.make chapter5_tutorials/CMakeFiles/base_controller.dir/build
+.PHONY : base_controller/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_nodejs
 
 # Build rule for target.
@@ -1403,6 +1416,19 @@ chapter2_tutorials_generate_messages_nodejs/fast:
 .PHONY : chapter2_tutorials_generate_messages_nodejs/fast
 
 #=============================================================================
+# Target rules for targets named sendGoals
+
+# Build rule for target.
+sendGoals: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sendGoals
+.PHONY : sendGoals
+
+# fast build rule for target.
+sendGoals/fast:
+	$(MAKE) -f chapter6_tutorials/CMakeFiles/sendGoals.dir/build.make chapter6_tutorials/CMakeFiles/sendGoals.dir/build
+.PHONY : sendGoals/fast
+
+#=============================================================================
 # Target rules for targets named frame_tf2_broadcaster
 
 # Build rule for target.
@@ -1630,6 +1656,7 @@ help:
 	@echo "... tf_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... base_controller"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... tf_generate_messages_cpp"
@@ -1692,6 +1719,7 @@ help:
 	@echo "... chapter2_tutorials_generate_messages"
 	@echo "... chapter2_tutorials_gennodejs"
 	@echo "... chapter2_tutorials_generate_messages_nodejs"
+	@echo "... sendGoals"
 	@echo "... frame_tf2_broadcaster"
 	@echo "... turtlesim_generate_messages_cpp"
 	@echo "... turtlesim_generate_messages_eus"
