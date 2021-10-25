@@ -1,0 +1,8 @@
+prefix=/home/phu/robot_ws/install
+
+Name: rosbook_arm_moveit_config
+Description: Description of rosbook_arm_moveit_config
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

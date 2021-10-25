@@ -1,0 +1,8 @@
+prefix=/home/phu/robot_ws/install
+
+Name: rosbook_arm_snippets
+Description: Description of rosbook_arm_snippets
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_core moveit_ros_planning_interface moveit_ros_move_group
