@@ -287,15 +287,15 @@
     </joint>
 
     <!-- Transmissions -->
-    <arm_simple_transmission name="shoulder"  reduction="1.0"/>
-    <arm_simple_transmission name="rotor_0"   reduction="1.0"/>
-    <arm_simple_transmission name="upper_arm" reduction="1.0"/>
-    <arm_simple_transmission name="rotor_1"   reduction="1.0"/>
-    <arm_simple_transmission name="forearm"   reduction="1.0"/>
-    <arm_simple_transmission name="rotor_2"   reduction="1.0"/>
-    <arm_simple_transmission name="tool"      reduction="1.0"/>
+    <xacro:arm_simple_transmission name="shoulder"  reduction="1.0"/>
+    <xacro:arm_simple_transmission name="rotor_0"   reduction="1.0"/>
+    <xacro:arm_simple_transmission name="upper_arm" reduction="1.0"/>
+    <xacro:arm_simple_transmission name="rotor_1"   reduction="1.0"/>
+    <xacro:arm_simple_transmission name="forearm"   reduction="1.0"/>
+    <xacro:arm_simple_transmission name="rotor_2"   reduction="1.0"/>
+    <xacro:arm_simple_transmission name="tool"      reduction="1.0"/>
 
     <!-- Simulation (gazebo) -->
-    <arm_gazebo/>
+    <xacro:arm_gazebo/>
   </xacro:macro>
 </robot>

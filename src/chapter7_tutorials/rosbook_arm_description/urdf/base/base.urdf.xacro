@@ -28,7 +28,7 @@
     </link>
 
     <!-- Simulation (gazebo) -->
-    <base_gazebo/>
+    <xacro:base_gazebo/>
   </xacro:macro>
 
 </robot>

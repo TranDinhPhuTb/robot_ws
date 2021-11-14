@@ -101,10 +101,10 @@
     </joint>
 
     <!-- Transmissions -->
-    <arm_simple_transmission name="finger_1" reduction="1.0"/>
-    <arm_simple_transmission name="finger_2" reduction="1.0"/>
+    <xacro:arm_simple_transmission name="finger_1" reduction="1.0"/>
+    <xacro:arm_simple_transmission name="finger_2" reduction="1.0"/>
 
     <!-- Simulation (gazebo) -->
-    <gripper_gazebo/>
+    <xacro:gripper_gazebo/>
   </xacro:macro>
 </robot>

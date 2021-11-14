@@ -798,6 +798,21 @@ class_loader_DIR:PATH=/opt/ros/noetic/share/class_loader/cmake
 //The directory containing a CMake configuration file for cmake_modules.
 cmake_modules_DIR:PATH=/opt/ros/noetic/share/cmake_modules/cmake
 
+//The directory containing a CMake configuration file for control_msgs.
+control_msgs_DIR:PATH=/opt/ros/noetic/share/control_msgs/cmake
+
+//The directory containing a CMake configuration file for control_toolbox.
+control_toolbox_DIR:PATH=/opt/ros/noetic/share/control_toolbox/cmake
+
+//The directory containing a CMake configuration file for controller_interface.
+controller_interface_DIR:PATH=/opt/ros/noetic/share/controller_interface/cmake
+
+//The directory containing a CMake configuration file for controller_manager.
+controller_manager_DIR:PATH=/opt/ros/noetic/share/controller_manager/cmake
+
+//The directory containing a CMake configuration file for controller_manager_msgs.
+controller_manager_msgs_DIR:PATH=/opt/ros/noetic/share/controller_manager_msgs/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/noetic/share/cpp_common/cmake
 
@@ -824,6 +839,9 @@ gazebo_proto_msgs_lib:FILEPATH=/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
 
 //The directory containing a CMake configuration file for gazebo_ros.
 gazebo_ros_DIR:PATH=/opt/ros/noetic/share/gazebo_ros/cmake
+
+//The directory containing a CMake configuration file for gazebo_ros_control.
+gazebo_ros_control_DIR:PATH=/opt/ros/noetic/share/gazebo_ros_control/cmake
 
 //Value Computed by CMake
 gazebo_tutorials_BINARY_DIR:STATIC=/home/phu/robot_ws/build/gazebo_ros_demos/gazebo_tutorials
@@ -904,6 +922,9 @@ gtest_hide_internal_symbols:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=/opt/ros/noetic/share/hardware_interface/cmake
+
 //The directory containing a CMake configuration file for ignition-cmake2.
 ignition-cmake2_DIR:PATH=/usr/share/cmake/ignition-cmake2
 
@@ -924,6 +945,9 @@ ignition-msgs5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-msgs5
 
 //The directory containing a CMake configuration file for ignition-transport8.
 ignition-transport8_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-transport8
+
+//The directory containing a CMake configuration file for joint_limits_interface.
+joint_limits_interface_DIR:PATH=/opt/ros/noetic/share/joint_limits_interface/cmake
 
 //The directory containing a CMake configuration file for jsoncpp.
 jsoncpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/jsoncpp
@@ -1054,6 +1078,9 @@ pluginlib_DIR:PATH=/opt/ros/noetic/share/pluginlib/cmake
 //The directory containing a CMake configuration file for random_numbers.
 random_numbers_DIR:PATH=/opt/ros/noetic/share/random_numbers/cmake
 
+//The directory containing a CMake configuration file for realtime_tools.
+realtime_tools_DIR:PATH=/opt/ros/noetic/share/realtime_tools/cmake
+
 //Value Computed by CMake
 robot1_description_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter4_tutorials/robot1_description
 
@@ -1070,10 +1097,43 @@ robot1_gazebo_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter4_tutorials/robot1
 robot_state_publisher_DIR:PATH=/opt/ros/noetic/share/robot_state_publisher/cmake
 
 //Value Computed by CMake
+rosbook_arm_bringup_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_bringup
+
+//Value Computed by CMake
+rosbook_arm_bringup_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter7_tutorials/rosbook_arm_bringup
+
+//Value Computed by CMake
+rosbook_arm_controller_configuration_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_controller_configuration
+
+//Value Computed by CMake
+rosbook_arm_controller_configuration_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter7_tutorials/rosbook_arm_controller_configuration
+
+//Value Computed by CMake
+rosbook_arm_controller_configuration_gazebo_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_controller_configuration_gazebo
+
+//Value Computed by CMake
+rosbook_arm_controller_configuration_gazebo_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter7_tutorials/rosbook_arm_controller_configuration_gazebo
+
+//Value Computed by CMake
 rosbook_arm_description_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_description
 
 //Value Computed by CMake
 rosbook_arm_description_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter7_tutorials/rosbook_arm_description
+
+//Value Computed by CMake
+rosbook_arm_gazebo_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_gazebo
+
+//Value Computed by CMake
+rosbook_arm_gazebo_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter7_tutorials/rosbook_arm_gazebo
+
+//Value Computed by CMake
+rosbook_arm_hardware_gazebo_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_hardware_gazebo
+
+//Dependencies for the target
+rosbook_arm_hardware_gazebo_LIB_DEPENDS:STATIC=general;/opt/ros/noetic/lib/libgazebo_ros_control.so;general;/opt/ros/noetic/lib/libdefault_robot_hw_sim.so;general;/opt/ros/noetic/lib/libcontroller_manager.so;general;/opt/ros/noetic/lib/libcontrol_toolbox.so;general;/opt/ros/noetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/noetic/lib/librealtime_tools.so;general;/opt/ros/noetic/lib/libtransmission_interface_parser.so;general;/opt/ros/noetic/lib/libtransmission_interface_loader.so;general;/opt/ros/noetic/lib/libtransmission_interface_loader_plugins.so;general;/opt/ros/noetic/lib/liburdf.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_sensor.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model_state.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_model.so;general;/usr/lib/x86_64-linux-gnu/liburdfdom_world.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/noetic/lib/libclass_loader.so;general;/usr/lib/x86_64-linux-gnu/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/noetic/lib/libroslib.so;general;/opt/ros/noetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython3.8.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/noetic/lib/librosconsole_bridge.so;general;/opt/ros/noetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0;general;/opt/ros/noetic/lib/librosconsole.so;general;/opt/ros/noetic/lib/librosconsole_log4cxx.so;general;/opt/ros/noetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0;general;/opt/ros/noetic/lib/libroscpp_serialization.so;general;/opt/ros/noetic/lib/libxmlrpcpp.so;general;/opt/ros/noetic/lib/librostime.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0;general;/opt/ros/noetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;general;BulletSoftBody;general;BulletDynamics;general;BulletCollision;general;LinearMath;general;SimTKcommon;general;SimTKmath;general;SimTKsimbody;general;dart;general;dart;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;Boost::thread;general;Boost::system;general;Boost::filesystem;general;Boost::program_options;general;Boost::regex;general;Boost::iostreams;general;Boost::date_time;general;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;sdformat9::sdformat9;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;Boost::thread;general;Boost::date_time;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;ignition-common3::ignition-common3-graphics;
+
+//Value Computed by CMake
+rosbook_arm_hardware_gazebo_SOURCE_DIR:STATIC=/home/phu/robot_ws/src/chapter7_tutorials/rosbook_arm_hardware_gazebo
 
 //Value Computed by CMake
 rosbook_arm_moveit_config_BINARY_DIR:STATIC=/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_moveit_config
@@ -1182,6 +1242,9 @@ tf_DIR:PATH=/opt/ros/noetic/share/tf/cmake
 
 //The directory containing a CMake configuration file for trajectory_msgs.
 trajectory_msgs_DIR:PATH=/opt/ros/noetic/share/trajectory_msgs/cmake
+
+//The directory containing a CMake configuration file for transmission_interface.
+transmission_interface_DIR:PATH=/opt/ros/noetic/share/transmission_interface/cmake
 
 //The directory containing a CMake configuration file for turtlesim.
 turtlesim_DIR:PATH=/opt/ros/noetic/share/turtlesim/cmake
@@ -1389,7 +1452,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=13
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=18
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1442,7 +1505,7 @@ CURL_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 CURL_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 DART_DEFINITIONS:INTERNAL=
 DART_INCLUDE_DIRS:INTERNAL=/usr/include
-DART_LIBRARIES:INTERNAL=dart
+DART_LIBRARIES:INTERNAL=dart;dart
 //Boost min version requirement
 DART_MIN_BOOST_VERSION:INTERNAL=1.58.0
 DART_dart_DEFINITIONS:INTERNAL=
@@ -1461,7 +1524,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/lib/x86_64-linux-gnu/cmake/Boo
 //Details about finding CURL
 FIND_PACKAGE_MESSAGE_DETAILS_CURL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcurl.so][/usr/include/x86_64-linux-gnu][c ][v7.68.0()]
 //Details about finding DART
-FIND_PACKAGE_MESSAGE_DETAILS_DART:INTERNAL=[/usr/include][dart][cfound components: dart ][v(6.6)]
+FIND_PACKAGE_MESSAGE_DETAILS_DART:INTERNAL=[/usr/include][dart;dart][cfound components: dart ][v(6.6)]
 //Details about finding DL
 FIND_PACKAGE_MESSAGE_DETAILS_DL:INTERNAL=[true][v()]
 //Details about finding Eigen
@@ -2209,5 +2272,5 @@ pkgcfg_lib_YAML_yaml-ADVANCED:INTERNAL=1
 pkgcfg_lib_ZIP_zip-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: pkgcfg_lib_ZeroMQ_zmq
 pkgcfg_lib_ZeroMQ_zmq-ADVANCED:INTERNAL=1
-prefix_result:INTERNAL=
+prefix_result:INTERNAL=/usr//usr/lib/x86_64-linux-gnu
 
