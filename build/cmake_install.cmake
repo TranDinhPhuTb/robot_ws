@@ -132,6 +132,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/phu/robot_ws/build/gtest/cmake_install.cmake")
   include("/home/phu/robot_ws/build/chapter5_tutorials/cmake_install.cmake")
+  include("/home/phu/robot_ws/build/phurobot_description/cmake_install.cmake")
+  include("/home/phu/robot_ws/build/phurobot_gazebo/cmake_install.cmake")
   include("/home/phu/robot_ws/build/chapter4_tutorials/robot1_description/cmake_install.cmake")
   include("/home/phu/robot_ws/build/chapter4_tutorials/robot1_gazebo/cmake_install.cmake")
   include("/home/phu/robot_ws/build/chapter7_tutorials/rosbook_arm_bringup/cmake_install.cmake")

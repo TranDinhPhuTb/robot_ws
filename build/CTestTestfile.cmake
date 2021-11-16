@@ -6,6 +6,8 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("chapter5_tutorials")
+subdirs("phurobot_description")
+subdirs("phurobot_gazebo")
 subdirs("chapter4_tutorials/robot1_description")
 subdirs("chapter4_tutorials/robot1_gazebo")
 subdirs("chapter7_tutorials/rosbook_arm_bringup")

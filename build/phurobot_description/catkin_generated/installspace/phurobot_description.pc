@@ -1,0 +1,8 @@
+prefix=/home/phu/robot_ws/install
+
+Name: phurobot_description
+Description: Description of phurobot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

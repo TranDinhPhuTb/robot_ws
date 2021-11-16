@@ -45,6 +45,8 @@ int main(int argc, char **argv)
     box.primitive_poses.push_back(pose);
     box.operation = box.ADD;
 
+    box.header.frame_id ="base_link";
+
     std::vector<moveit_msgs::CollisionObject> collision_objects;
     collision_objects.push_back(box);
 

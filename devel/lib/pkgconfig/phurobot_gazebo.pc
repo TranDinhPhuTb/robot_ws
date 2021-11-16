@@ -1,0 +1,8 @@
+prefix=/home/phu/robot_ws/devel
+
+Name: phurobot_gazebo
+Description: Description of phurobot_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

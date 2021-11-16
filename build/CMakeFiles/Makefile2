@@ -55,6 +55,8 @@ CMAKE_BINARY_DIR = /home/phu/robot_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: chapter5_tutorials/all
+all: phurobot_description/all
+all: phurobot_gazebo/all
 all: chapter4_tutorials/robot1_description/all
 all: chapter4_tutorials/robot1_gazebo/all
 all: chapter7_tutorials/rosbook_arm_bringup/all
@@ -74,6 +76,8 @@ all: chapter7_tutorials/rosbook_arm_snippets/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: chapter5_tutorials/preinstall
+preinstall: phurobot_description/preinstall
+preinstall: phurobot_gazebo/preinstall
 preinstall: chapter4_tutorials/robot1_description/preinstall
 preinstall: chapter4_tutorials/robot1_gazebo/preinstall
 preinstall: chapter7_tutorials/rosbook_arm_bringup/preinstall
@@ -98,6 +102,8 @@ clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
 clean: chapter5_tutorials/clean
+clean: phurobot_description/clean
+clean: phurobot_gazebo/clean
 clean: chapter4_tutorials/robot1_description/clean
 clean: chapter4_tutorials/robot1_gazebo/clean
 clean: chapter7_tutorials/rosbook_arm_bringup/clean
@@ -183,13 +189,12 @@ chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_descripti
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_lisp.dir/clean
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
-chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean
-chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
-chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
 chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
+chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
+chapter4_tutorials/robot1_description/clean: chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean
 
 .PHONY : chapter4_tutorials/robot1_description/clean
 
@@ -592,6 +597,42 @@ learning_tf2/clean: learning_tf2/CMakeFiles/std_srvs_generate_messages_nodejs.di
 learning_tf2/clean: learning_tf2/CMakeFiles/turtle_tf2_broadcaster.dir/clean
 
 .PHONY : learning_tf2/clean
+
+#=============================================================================
+# Directory level rules for directory phurobot_description
+
+# Recursive "all" directory target.
+phurobot_description/all:
+
+.PHONY : phurobot_description/all
+
+# Recursive "preinstall" directory target.
+phurobot_description/preinstall:
+
+.PHONY : phurobot_description/preinstall
+
+# Recursive "clean" directory target.
+phurobot_description/clean: phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : phurobot_description/clean
+
+#=============================================================================
+# Directory level rules for directory phurobot_gazebo
+
+# Recursive "all" directory target.
+phurobot_gazebo/all:
+
+.PHONY : phurobot_gazebo/all
+
+# Recursive "preinstall" directory target.
+phurobot_gazebo/preinstall:
+
+.PHONY : phurobot_gazebo/preinstall
+
+# Recursive "clean" directory target.
+phurobot_gazebo/clean:
+
+.PHONY : phurobot_gazebo/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -2215,6 +2256,33 @@ chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
 .PHONY : chapter5_tutorials/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
+# Target rules for target phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir
+
+# All Build rule for target.
+phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/all
+
+# Build rule for subdir invocation for target.
+phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+.PHONY : phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# clean rule for target.
+phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : phurobot_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+#=============================================================================
 # Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/laser_filters_gencfg.dir
 
 # All Build rule for target.
@@ -2431,60 +2499,6 @@ chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_me
 .PHONY : chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir
-
-# All Build rule for target.
-chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/all:
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/depend
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num= "Built target robot1_description_xacro_generated_to_devel_space_"
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/all
-
-# Build rule for subdir invocation for target.
-chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
-
-# Convenience name for target.
-robot1_description_xacro_generated_to_devel_space_: chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
-
-.PHONY : robot1_description_xacro_generated_to_devel_space_
-
-# clean rule for target.
-chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean:
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean
-
-#=============================================================================
-# Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_nodejs"
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# clean rule for target.
-chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
 # Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir
 
 # All Build rule for target.
@@ -2539,33 +2553,6 @@ chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_py.d
 .PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir
-
-# All Build rule for target.
-chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/all
-
-# Build rule for subdir invocation for target.
-chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# clean rule for target.
-chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-#=============================================================================
 # Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir
 
 # All Build rule for target.
@@ -2618,6 +2605,60 @@ dynamic_reconfigure_gencfg: chapter4_tutorials/robot1_description/CMakeFiles/dyn
 chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean:
 	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 .PHONY : chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
+
+#=============================================================================
+# Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num= "Built target nav_msgs_generate_messages_nodejs"
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# clean rule for target.
+chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir
+
+# All Build rule for target.
+chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/all:
+	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/depend
+	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/phu/robot_ws/build/CMakeFiles --progress-num= "Built target robot1_description_xacro_generated_to_devel_space_"
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/all
+
+# Build rule for subdir invocation for target.
+chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/phu/robot_ws/build/CMakeFiles 0
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
+
+# Convenience name for target.
+robot1_description_xacro_generated_to_devel_space_: chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
+
+.PHONY : robot1_description_xacro_generated_to_devel_space_
+
+# clean rule for target.
+chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean:
+	$(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/clean
 
 #=============================================================================
 # Target rules for target chapter2_tutorials/CMakeFiles/example3_a.dir

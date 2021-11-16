@@ -144,7 +144,7 @@ rosbook_arm_hardware_gazebo_EXTERNAL_OBJECTS =
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so.1.71.0
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libsdformat9.so.9.6.1
+/home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libsdformat9.so.9.7.0
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
@@ -164,9 +164,9 @@ rosbook_arm_hardware_gazebo_EXTERNAL_OBJECTS =
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/liboctomap.so.1.9.3
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/liboctomath.so.1.9.3
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
-/home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-transport8.so.8.2.0
+/home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-transport8.so.8.2.1
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools4.so.4.4.0
-/home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-msgs5.so.5.8.0
+/home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-msgs5.so.5.8.1
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-math6.so.6.9.2
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 /home/phu/robot_ws/devel/lib/librosbook_arm_hardware_gazebo.so: /usr/lib/x86_64-linux-gnu/libignition-common3.so.3.14.0

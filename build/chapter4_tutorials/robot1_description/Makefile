@@ -288,36 +288,6 @@ dynamic_reconfigure_generate_messages_py/fast:
 .PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
-chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
-
-# Convenience name for target.
-robot1_description_xacro_generated_to_devel_space_: chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
-
-.PHONY : robot1_description_xacro_generated_to_devel_space_
-
-# fast build rule for target.
-robot1_description_xacro_generated_to_devel_space_/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build
-.PHONY : robot1_description_xacro_generated_to_devel_space_/fast
-
-# Convenience name for target.
-chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_nodejs: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : nav_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
 	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 .PHONY : chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
@@ -348,21 +318,6 @@ nav_msgs_generate_messages_py/fast:
 .PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-# Convenience name for target.
-_catkin_empty_exported_target: chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/rule
-
-.PHONY : _catkin_empty_exported_target
-
-# fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
-
-# Convenience name for target.
 chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
 	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
 .PHONY : chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
@@ -391,6 +346,36 @@ dynamic_reconfigure_gencfg: chapter4_tutorials/robot1_description/CMakeFiles/dyn
 dynamic_reconfigure_gencfg/fast:
 	cd /home/phu/robot_ws/build && $(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
 .PHONY : dynamic_reconfigure_gencfg/fast
+
+# Convenience name for target.
+chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule:
+	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
+.PHONY : chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
+
+# Convenience name for target.
+robot1_description_xacro_generated_to_devel_space_: chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/rule
+
+.PHONY : robot1_description_xacro_generated_to_devel_space_
+
+# fast build rule for target.
+robot1_description_xacro_generated_to_devel_space_/fast:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build.make chapter4_tutorials/robot1_description/CMakeFiles/robot1_description_xacro_generated_to_devel_space_.dir/build
+.PHONY : robot1_description_xacro_generated_to_devel_space_/fast
 
 src/state_publisher.o: src/state_publisher.cpp.o
 
@@ -438,15 +423,14 @@ help:
 	@echo "... nav_msgs_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... robot1_description_xacro_generated_to_devel_space_"
-	@echo "... nav_msgs_generate_messages_nodejs"
 	@echo "... dynamic_reconfigure_generate_messages_nodejs"
 	@echo "... list_install_components"
 	@echo "... nav_msgs_generate_messages_py"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... test"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_gencfg"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... robot1_description_xacro_generated_to_devel_space_"
 	@echo "... src/state_publisher.o"
 	@echo "... src/state_publisher.i"
 	@echo "... src/state_publisher.s"
