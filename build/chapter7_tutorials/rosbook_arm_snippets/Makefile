@@ -56,29 +56,27 @@ CMAKE_BINARY_DIR = /home/phu/robot_ws/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -113,27 +111,29 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
-.PHONY : list_install_components/fast
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -198,169 +198,19 @@ move_group_add_object/fast:
 .PHONY : move_group_add_object/fast
 
 # Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
+chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule:
+	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule
+.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule
 
 # Convenience name for target.
-moveit_msgs_generate_messages_eus: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_eus.dir/rule
+move_group_plan_group_state: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule
 
-.PHONY : moveit_msgs_generate_messages_eus
+.PHONY : move_group_plan_group_state
 
 # fast build rule for target.
-moveit_msgs_generate_messages_eus/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_eus.dir/build
-.PHONY : moveit_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_lisp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_lisp
-
-# fast build rule for target.
-moveit_msgs_generate_messages_lisp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_lisp.dir/build
-.PHONY : moveit_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_nodejs: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-visualization_msgs_generate_messages_nodejs/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
-.PHONY : visualization_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_lisp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_lisp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_lisp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
-.PHONY : visualization_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_cpp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_cpp
-
-# fast build rule for target.
-octomap_msgs_generate_messages_cpp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_cpp.dir/build
-.PHONY : octomap_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_py: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_py.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_py
-
-# fast build rule for target.
-octomap_msgs_generate_messages_py/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_py.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_py.dir/build
-.PHONY : octomap_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_py.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_py: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_py.dir/rule
-
-.PHONY : shape_msgs_generate_messages_py
-
-# fast build rule for target.
-shape_msgs_generate_messages_py/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_py.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_py.dir/build
-.PHONY : shape_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_eus: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_eus.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_eus
-
-# fast build rule for target.
-octomap_msgs_generate_messages_eus/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_eus.dir/build
-.PHONY : octomap_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_nodejs: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : shape_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-shape_msgs_generate_messages_nodejs/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_nodejs.dir/build
-.PHONY : shape_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_py: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_py
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_py/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_py.dir/build
-.PHONY : object_recognition_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_lisp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : shape_msgs_generate_messages_lisp
-
-# fast build rule for target.
-shape_msgs_generate_messages_lisp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_lisp.dir/build
-.PHONY : shape_msgs_generate_messages_lisp/fast
+move_group_plan_group_state/fast:
+	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/build
+.PHONY : move_group_plan_group_state/fast
 
 # Convenience name for target.
 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_random_target.dir/rule:
@@ -378,96 +228,6 @@ move_group_plan_random_target/fast:
 .PHONY : move_group_plan_random_target/fast
 
 # Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_cpp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_cpp
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_cpp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_cpp.dir/build
-.PHONY : object_recognition_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_eus: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_eus.dir/rule
-
-.PHONY : shape_msgs_generate_messages_eus
-
-# fast build rule for target.
-shape_msgs_generate_messages_eus/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_eus.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_eus.dir/build
-.PHONY : shape_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-shape_msgs_generate_messages_cpp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : shape_msgs_generate_messages_cpp
-
-# fast build rule for target.
-shape_msgs_generate_messages_cpp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/shape_msgs_generate_messages_cpp.dir/build
-.PHONY : shape_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_nodejs: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-moveit_msgs_generate_messages_nodejs/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_nodejs.dir/build
-.PHONY : moveit_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_single_target.dir/rule:
 	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_single_target.dir/rule
 .PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_single_target.dir/rule
@@ -481,171 +241,6 @@ move_group_plan_single_target: chapter7_tutorials/rosbook_arm_snippets/CMakeFile
 move_group_plan_single_target/fast:
 	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_single_target.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_single_target.dir/build
 .PHONY : move_group_plan_single_target/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_lisp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_lisp
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_lisp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_lisp.dir/build
-.PHONY : object_recognition_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_eus: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_eus.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_eus
-
-# fast build rule for target.
-visualization_msgs_generate_messages_eus/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
-.PHONY : visualization_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_py: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_py.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_py
-
-# fast build rule for target.
-moveit_msgs_generate_messages_py/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_py.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_py.dir/build
-.PHONY : moveit_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_eus: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_eus
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_eus/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_eus.dir/build
-.PHONY : object_recognition_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-object_recognition_msgs_generate_messages_nodejs: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : object_recognition_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-object_recognition_msgs_generate_messages_nodejs/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/object_recognition_msgs_generate_messages_nodejs.dir/build
-.PHONY : object_recognition_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_planning_gencfg.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-
-# Convenience name for target.
-moveit_ros_planning_gencfg: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_planning_gencfg.dir/rule
-
-.PHONY : moveit_ros_planning_gencfg
-
-# fast build rule for target.
-moveit_ros_planning_gencfg/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_planning_gencfg.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_planning_gencfg.dir/build
-.PHONY : moveit_ros_planning_gencfg/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_lisp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_lisp
-
-# fast build rule for target.
-octomap_msgs_generate_messages_lisp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_lisp.dir/build
-.PHONY : octomap_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-octomap_msgs_generate_messages_nodejs: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : octomap_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-octomap_msgs_generate_messages_nodejs/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/octomap_msgs_generate_messages_nodejs.dir/build
-.PHONY : octomap_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
-
-# Convenience name for target.
-moveit_ros_manipulation_gencfg: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_manipulation_gencfg.dir/rule
-
-.PHONY : moveit_ros_manipulation_gencfg
-
-# fast build rule for target.
-moveit_ros_manipulation_gencfg/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_ros_manipulation_gencfg.dir/build
-.PHONY : moveit_ros_manipulation_gencfg/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-moveit_msgs_generate_messages_cpp: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : moveit_msgs_generate_messages_cpp
-
-# fast build rule for target.
-moveit_msgs_generate_messages_cpp/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/moveit_msgs_generate_messages_cpp.dir/build
-.PHONY : moveit_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule:
-	cd /home/phu/robot_ws/build && $(MAKE) -f CMakeFiles/Makefile2 chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule
-.PHONY : chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule
-
-# Convenience name for target.
-move_group_plan_group_state: chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/rule
-
-.PHONY : move_group_plan_group_state
-
-# fast build rule for target.
-move_group_plan_group_state/fast:
-	cd /home/phu/robot_ws/build && $(MAKE) -f chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/build.make chapter7_tutorials/rosbook_arm_snippets/CMakeFiles/move_group_plan_group_state.dir/build
-.PHONY : move_group_plan_group_state/fast
 
 src/move_group_add_object.o: src/move_group_add_object.cpp.o
 
@@ -788,45 +383,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... install/local"
 	@echo "... move_group_remove_object"
 	@echo "... move_group_add_object"
-	@echo "... moveit_msgs_generate_messages_eus"
-	@echo "... moveit_msgs_generate_messages_lisp"
-	@echo "... list_install_components"
-	@echo "... visualization_msgs_generate_messages_nodejs"
-	@echo "... visualization_msgs_generate_messages_lisp"
-	@echo "... octomap_msgs_generate_messages_cpp"
-	@echo "... octomap_msgs_generate_messages_py"
-	@echo "... shape_msgs_generate_messages_py"
-	@echo "... octomap_msgs_generate_messages_eus"
-	@echo "... shape_msgs_generate_messages_nodejs"
-	@echo "... object_recognition_msgs_generate_messages_py"
-	@echo "... shape_msgs_generate_messages_lisp"
-	@echo "... move_group_plan_random_target"
-	@echo "... visualization_msgs_generate_messages_cpp"
-	@echo "... object_recognition_msgs_generate_messages_cpp"
-	@echo "... shape_msgs_generate_messages_eus"
-	@echo "... install"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... shape_msgs_generate_messages_cpp"
-	@echo "... moveit_msgs_generate_messages_nodejs"
-	@echo "... move_group_plan_single_target"
-	@echo "... object_recognition_msgs_generate_messages_lisp"
-	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... moveit_msgs_generate_messages_py"
-	@echo "... object_recognition_msgs_generate_messages_eus"
-	@echo "... object_recognition_msgs_generate_messages_nodejs"
-	@echo "... moveit_ros_planning_gencfg"
-	@echo "... octomap_msgs_generate_messages_lisp"
-	@echo "... octomap_msgs_generate_messages_nodejs"
-	@echo "... moveit_ros_manipulation_gencfg"
-	@echo "... moveit_msgs_generate_messages_cpp"
+	@echo "... install/strip"
 	@echo "... move_group_plan_group_state"
+	@echo "... move_group_plan_random_target"
+	@echo "... move_group_plan_single_target"
 	@echo "... src/move_group_add_object.o"
 	@echo "... src/move_group_add_object.i"
 	@echo "... src/move_group_add_object.s"
